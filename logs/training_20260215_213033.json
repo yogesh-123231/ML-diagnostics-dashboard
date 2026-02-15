@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-15T21:30:33.423394",
+  "model_type": "linear",
+  "hyperparameters": {
+    "max_depth": null,
+    "min_samples_leaf": null
+  },
+  "metrics": {
+    "train_mse": 905021.0294916087,
+    "val_mse": 2111734.5556453634,
+    "test_mse": 1455260.5956255714,
+    "train_r2": 0.9983696124989337,
+    "val_r2": 0.9950836029653138,
+    "test_r2": 0.9974567002884324
+  },
+  "diagnostics": {
+    "overfitting": false,
+    "underfitting": false,
+    "good_fit": true,
+    "unstable": false,
+    "messages": [
+      "\u2705 Model appears to be well-fitted! Average R\u00b2 = 0.9970, R\u00b2 variance = 0.0033. Performance is consistent across train/validation/test sets."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 905021.0294916087,
+        "R2": 0.9983696124989337
+      },
+      {
+        "name": "Validation",
+        "MSE": 2111734.5556453634,
+        "R2": 0.9950836029653138
+      },
+      {
+        "name": "Test",
+        "MSE": 1455260.5956255714,
+        "R2": 0.9974567002884324
+      }
+    ]
+  }
+}

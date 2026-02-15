@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-15T19:56:51.707581",
+  "model_type": "tree",
+  "hyperparameters": {
+    "max_depth": 15,
+    "min_samples_leaf": 1
+  },
+  "metrics": {
+    "train_mse": 64971.751412429374,
+    "val_mse": 5200000.0,
+    "test_mse": 4697368.421052632,
+    "train_r2": 0.9998829539557941,
+    "val_r2": 0.9878937130085675,
+    "test_r2": 0.9917906004008482
+  },
+  "diagnostics": {
+    "overfitting": true,
+    "underfitting": false,
+    "good_fit": false,
+    "unstable": false,
+    "messages": [
+      "\u26a0\ufe0f SEVERE Overfitting detected: Model memorizes training data but fails on new data. Training MSE is 64972 but Validation MSE is 5200000 (80.0x higher). Try: reduce model complexity (lower max_depth for trees), add regularization, or collect more data."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 64971.751412429374,
+        "R2": 0.9998829539557941
+      },
+      {
+        "name": "Validation",
+        "MSE": 5200000.0,
+        "R2": 0.9878937130085675
+      },
+      {
+        "name": "Test",
+        "MSE": 4697368.421052632,
+        "R2": 0.9917906004008482
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-15T19:44:00.299338",
+  "model_type": "tree",
+  "hyperparameters": {
+    "max_depth": 3,
+    "min_samples_leaf": 1
+  },
+  "metrics": {
+    "train_mse": 9773708.63599677,
+    "val_mse": 15871401.014109349,
+    "test_mse": 12711484.191629862,
+    "train_r2": 0.9823927490302146,
+    "val_r2": 0.9630492816090538,
+    "test_r2": 0.9777846564557935
+  },
+  "diagnostics": {
+    "overfitting": true,
+    "underfitting": false,
+    "good_fit": false,
+    "unstable": false,
+    "messages": [
+      "\u26a0\ufe0f Overfitting detected: Validation loss is significantly higher than training loss. Try: reduce model complexity (lower max_depth), add regularization, or collect more data."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 9773708.63599677,
+        "R2": 0.9823927490302146
+      },
+      {
+        "name": "Validation",
+        "MSE": 15871401.014109349,
+        "R2": 0.9630492816090538
+      },
+      {
+        "name": "Test",
+        "MSE": 12711484.191629862,
+        "R2": 0.9777846564557935
+      }
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-02-15T19:50:55.890776",
+  "model_type": "tree",
+  "hyperparameters": {
+    "max_depth": 15,
+    "min_samples_leaf": 1
+  },
+  "metrics": {
+    "train_mse": 64971.751412429374,
+    "val_mse": 5200000.0,
+    "test_mse": 4697368.421052632,
+    "train_r2": 0.9998829539557941,
+    "val_r2": 0.9878937130085675,
+    "test_r2": 0.9917906004008482
+  },
+  "diagnostics": {
+    "overfitting": false,
+    "underfitting": false,
+    "good_fit": true,
+    "unstable": false,
+    "messages": [
+      "\u2705 Model appears to be well-fitted! Average R\u00b2 = 0.9932, R\u00b2 variance = 0.0120. Performance is consistent across train/validation/test sets."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 64971.751412429374,
+        "R2": 0.9998829539557941
+      },
+      {
+        "name": "Validation",
+        "MSE": 5200000.0,
+        "R2": 0.9878937130085675
+      },
+      {
+        "name": "Test",
+        "MSE": 4697368.421052632,
+        "R2": 0.9917906004008482
+      }
+    ]
+  }
+}
