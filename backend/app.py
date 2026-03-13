@@ -2,6 +2,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
 import json
+import os
 from utils import handle_missing_values, get_eda_summary
 from train import train_model
 
@@ -16,6 +17,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Base directory for absolute paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 @app.get("/")
 def read_root():
     return {"message": "ML Diagnostics API is running"}
@@ -26,11 +30,12 @@ async def upload_file(file: UploadFile = File(...)):
     contents = await file.read()
     
     # Save to data folder
-    with open("../data/raw.csv", "wb") as f:
+    raw_path = os.path.join(BASE_DIR, "../data/raw.csv")
+    with open(raw_path, "wb") as f:
         f.write(contents)
     
     # Load with pandas
-    df = pd.read_csv("../data/raw.csv")
+    df = pd.read_csv(raw_path)
     
     # Basic EDA
     eda = {
@@ -46,13 +51,15 @@ async def upload_file(file: UploadFile = File(...)):
 @app.post("/clean")
 async def clean_data(method: str = "mean"):
     # Load raw data
-    df = pd.read_csv("../data/raw.csv")
+    raw_path = os.path.join(BASE_DIR, "../data/raw.csv")
+    df = pd.read_csv(raw_path)
     
     # Clean
     df_clean = handle_missing_values(df, method=method)
     
     # Save cleaned data
-    df_clean.to_csv("../data/cleaned.csv", index=False)
+    cleaned_path = os.path.join(BASE_DIR, "../data/cleaned.csv")
+    df_clean.to_csv(cleaned_path, index=False)
     
     return {
         "message": "Data cleaned successfully",

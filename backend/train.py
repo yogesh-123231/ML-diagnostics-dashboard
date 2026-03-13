@@ -8,13 +8,17 @@ import json
 from datetime import datetime
 import os
 
+# Base directory for absolute paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 def train_model(model_type="linear", target_col="target", test_size=0.2, 
                 random_state=42, max_depth=3, min_samples_leaf=1):
     """
     Train a model and return metrics + diagnostics
     """
     # Load cleaned data
-    df = pd.read_csv("../data/cleaned.csv")
+    data_path = os.path.join(BASE_DIR, "../data/cleaned.csv")
+    df = pd.read_csv(data_path)
     
     # Separate features and target
     X = df.drop(columns=[target_col])
@@ -92,10 +96,11 @@ def train_model(model_type="linear", target_col="target", test_size=0.2,
     }
     
     # Create logs directory if it doesn't exist
-    os.makedirs("../logs", exist_ok=True)
+    log_dir = os.path.join(BASE_DIR, "../logs")
+    os.makedirs(log_dir, exist_ok=True)
     
     # Save log
-    log_filename = f"../logs/training_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    log_filename = os.path.join(log_dir, f"training_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     with open(log_filename, "w") as f:
         json.dump(log_data, f, indent=2)
     

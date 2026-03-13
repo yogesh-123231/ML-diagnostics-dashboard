@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-02-15T21:45:39.165870",
+  "model_type": "linear",
+  "hyperparameters": {
+    "max_depth": null,
+    "min_samples_leaf": null
+  },
+  "metrics": {
+    "train_mse": 59772953.5942382,
+    "val_mse": 122516362.8987709,
+    "test_mse": 379435449.4191016,
+    "train_r2": 0.9943812820048193,
+    "val_r2": 0.9925427619047642,
+    "test_r2": 0.9877328424745692
+  },
+  "diagnostics": {
+    "overfitting": false,
+    "underfitting": false,
+    "good_fit": true,
+    "unstable": false,
+    "messages": [
+      "\u2705 Model appears to be well-fitted! Average R\u00b2 = 0.9916, R\u00b2 variance = 0.0066. Performance is consistent across train/validation/test sets.",
+      "\u2139\ufe0f Test and validation losses differ by 209.7%. This is normal for small datasets but monitor if using for production."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 59772953.5942382,
+        "R2": 0.9943812820048193
+      },
+      {
+        "name": "Validation",
+        "MSE": 122516362.8987709,
+        "R2": 0.9925427619047642
+      },
+      {
+        "name": "Test",
+        "MSE": 379435449.4191016,
+        "R2": 0.9877328424745692
+      }
+    ]
+  }
+}

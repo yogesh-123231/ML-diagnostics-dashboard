@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-02-15T21:45:24.042459",
+  "model_type": "tree",
+  "hyperparameters": {
+    "max_depth": 3,
+    "min_samples_leaf": 1
+  },
+  "metrics": {
+    "train_mse": 103645833.33333333,
+    "val_mse": 167744791.66666692,
+    "test_mse": 3398981944.4444447,
+    "train_r2": 0.9902571870075427,
+    "val_r2": 0.9897898303451301,
+    "test_r2": 0.8901108291214496
+  },
+  "diagnostics": {
+    "overfitting": false,
+    "underfitting": false,
+    "good_fit": true,
+    "unstable": false,
+    "messages": [
+      "\u2705 Model appears to be well-fitted! Average R\u00b2 = 0.9567, R\u00b2 variance = 0.1001. Performance is consistent across train/validation/test sets.",
+      "\u2139\ufe0f Note: R\u00b2 scores vary by 0.100 across datasets. This might indicate: (1) small dataset size, (2) data distribution differences, or (3) random variation.",
+      "\u2139\ufe0f Test and validation losses differ by 1926.3%. This is normal for small datasets but monitor if using for production."
+    ]
+  },
+  "chart_data": {
+    "metrics": [
+      {
+        "name": "Train",
+        "MSE": 103645833.33333333,
+        "R2": 0.9902571870075427
+      },
+      {
+        "name": "Validation",
+        "MSE": 167744791.66666692,
+        "R2": 0.9897898303451301
+      },
+      {
+        "name": "Test",
+        "MSE": 3398981944.4444447,
+        "R2": 0.8901108291214496
+      }
+    ]
+  }
+}
